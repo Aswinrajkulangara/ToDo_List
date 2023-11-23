@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODo List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body style="background: rgb(0, 238, 255);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h1 class="text-center text-primary mt-5"> ToDo List</h1>
+                <form action="" class="mt-5 border border-primary p-4 rounded">
+                    <div class="d-flex">
+                    <input id="result" type="text" class="form-control" placeholder="Enter the list"> 
+                    <button  onclick="add()"   type="button" class="btn btn-success ms-5">ADD</button>
+                    
+                </div>
+            
+                </form>
+
+                <div class="list  border border-primary mt-3 h-auto ">
+                    <h4 style="color: rgba(255, 162, 0, 0.837);" class="text-center">List</h4>
+                    <ol id="item" >
+                    
+
+                    </ol>
+                </div>
+                
+            </div>
+<div class="col-md-4"></div>
+        </div>
+    </div>
+</body>
+<script>
+    
+
+    function add(){
+        if(result.value)
+        {
+            item.innerHTML+=`<li> ${result.value}</li>`
+            result.value=''
+
+        }
+        else{
+            alert('enter valid input')
+        }
+
+    }
+    
+
+</script>
+</html>
